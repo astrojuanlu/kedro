@@ -285,8 +285,11 @@ jobs:
             equal: [ "3.10", <<parameters.python_version>> ]
           steps:
             - run:
-                name: Run unit tests without spark in parallel
-                command: conda activate kedro_builder; make test-no-spark
+                name: Run unit tests without spark and without micropkg in parallel
+                command: conda activate kedro_builder; pytest --no-cov --ignore tests/extras/datasets/spark -k "not micropkg" --numprocesses 4 --dist loadfile
+            - run:
+                name: Run micropkg unit tests sequentially
+                command: conda activate kedro_builder; pytest --no-cov --ignore tests/extras/datasets/spark -k "micropkg" --dist no
       - when:
           condition:
             equal: [ "3.10", <<parameters.python_version>> ]
