@@ -10,6 +10,8 @@
 [![Documentation](https://readthedocs.org/projects/kedro/badge/?version=stable)](https://docs.kedro.org/)
 [![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/6711/badge)](https://bestpractices.coreinfrastructure.org/projects/6711)
 
+![Powered by Kedro](https://img.shields.io/badge/powered_by-%E2%AC%A5_kedro-ffc900)
+
 ## What is Kedro?
 
 Kedro is a toolbox for production-ready data science. It uses software engineering best practices to help you create data engineering and data science pipelines that are reproducible, maintainable, and modular.
